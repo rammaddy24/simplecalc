@@ -1,28 +1,25 @@
-const defaultState = {result:0 };
+const defaultState = {inputValue:0,result:0,previousInputValue:0,selectedSymbol:null };
 
 export default function reducer(state = defaultState, action) {
     switch (action.type) {
-        case 'ADDITION':
+        case 'SETINPUT':
             return Object.assign({}, state, {
-                result:0
+                inputValue:action.inputValue
             });
-        case 'SUBTRACTION':
+        case 'CALCULATEINPUT':
             return Object.assign({}, state, {
-                result:0
+                inputValue:action.inputValue,
+                selectedSymbol:action.selectedSymbol,
+                previousInputValue:action.previousInputValue,
+               
             });
-        case 'MULTIPLICATION':
+        case 'RESULT':
             return Object.assign({}, state, {
-                result:0
+                inputValue:action.inputValue,
+                selectedSymbol:action.selectedSymbol,
+                previousInputValue:action.previousInputValue,
             });
-        case 'DIVISION':
-        return Object.assign({}, state, {
-            result:0
-        });
-        case 'OUTPUT':
-        return Object.assign({}, state, {
-            result:0
-        });
-
+      
         default:
             return state;
     }
