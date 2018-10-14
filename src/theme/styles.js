@@ -1,6 +1,4 @@
-import { StyleSheet, Dimensions } from 'react-native';
-var { width, height } = Dimensions.get('window');
-
+import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
 
     rootContainer: {
@@ -9,14 +7,10 @@ const styles = StyleSheet.create({
 
     displayContainer: {
         flex: 2,
-        backgroundColor: '#193441',
         justifyContent: 'center'
     },
 
     displayText: {
-        color: 'white',
-        fontSize: 38,
-        fontWeight: 'bold',
         textAlign: 'right',
         padding: 20
     },
@@ -37,12 +31,14 @@ const styles = StyleSheet.create({
     inputButtonHighlighted: {
         backgroundColor: '#193441'
     },
-
+   
+   /*
     inputButtonText: {
         fontSize: 22,
         fontWeight: 'bold',
         color: 'white'
     },
+    */
 
     inputRow: {
         flex: 1,
